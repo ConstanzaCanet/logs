@@ -114,10 +114,6 @@ app.get('/winston',(req,res)=>{
 
 
 /*Logger */
-app.get('/',(req,res)=>{
-    logger.info('Holis busco verduras')
-    res.send('Holiiii')
-})
 
 app.get('/error',(req,res)=>{
     logger.error("se quema la verduleria")
@@ -126,11 +122,11 @@ app.get('/error',(req,res)=>{
 
 
 /*Winston */
+app.on('error',(error)=>{
+    loggerW.warn("Area 51, nos atacan los aliens!")
+    console.log("Algo anda mal aqui")
+})
 app.get('/*',(req,res)=>{
     loggerW.warn("Area 51, terreno jamas visto")
     res.status(404).send({error:'Invalid endpoint'})
 })
- app.on('error',(error)=>{
-    loggerW.warn("Area 51, nos atacan los aliens!")
-    console.log("Algo anda mal aqui")
-    })
