@@ -39,7 +39,7 @@ const logger = Log4js.getLogger(process.env.NODE_ENV)
 
 const app = express();
 
-const PORT= parseInt(process.argv[2]||8080)
+const PORT= process.env.PORT || 5000
 /*Artillery*/
 
 const isCluster = process.argv[3]==="CLUSTER";
