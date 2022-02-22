@@ -8,3 +8,5 @@
 {"level":"info","message":"GET at /dv"}
 {"level":"warn","message":"Area 51, terreno jamas visto"}
 {"level":"info","message":{"argv":["C:\\Program Files\\nodejs\\node.exe","C:\\Users\\carne\\Documents\\log\\Logs\\app.js"],"execPath":"C:\\Program Files\\nodejs\\node.exe","platform":"win32","processId":12656,"projectDir":"C:\\Users\\carne\\Documents\\log\\Logs","reservedMemory":44855296,"version":"v16.14.0"}}
+{"level":"info","message":"GET at /favicon.ico"}
+{"level":"warn","message":"Area 51, terreno jamas visto"}

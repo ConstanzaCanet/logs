@@ -58,17 +58,14 @@ if (isCluster&&cluster.isPrimary) {
 }
 else{
     
-    app.get('/',(req,res)=>{
-        
-    })
     app.listen(PORT,()=>console.log('te oigo en el puerto '+PORT))
     
 }
 
+app.use(express.static(__dirname+'/public'));
 
 /*uso compression---> debo dejar instanciado: */
 app.use(compression())
-app.use(express.static(__dirname+"public"))
 app.use('/info',infoRouter)
 
 /*Profiling */
