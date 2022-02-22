@@ -6,7 +6,7 @@ import { cpus } from 'os';
 import bcrypt from 'bcrypt';
 import infoRouter from './info.js';
 import createLogger from './utils.js';
-
+import {__dirname} from './utils.js'
 
 /*Configuro log4js */
 Log4js.configure({
@@ -68,6 +68,7 @@ else{
 
 /*uso compression---> debo dejar instanciado: */
 app.use(compression())
+app.use(express.static(__dirname+"public"))
 app.use('/info',infoRouter)
 
 /*Profiling */
